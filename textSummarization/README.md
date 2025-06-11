@@ -34,7 +34,7 @@ Provide your text input, and the summarizer will output a summary.
 This project is licensed under the MIT License.
 
 <!--
-Main idea: In the future, this app will be extended to compare different text summarization algorithms side by side.
+
 # AWS-CICD-Deployment-with-Github-Actions
 
 ## 1. Login to AWS console.
