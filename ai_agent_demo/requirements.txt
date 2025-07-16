@@ -1,0 +1,24 @@
+langchain 
+wikipedia 
+langchain-community 
+langchain-openai
+langchain-anthropic
+python-dotenv
+pydantic
+duckduckgo-search
+ddgs
+transformers 
+torch 
+langchain-huggingface
+datasets 
+peft 
+scikit-learn 
+matplotlib 
+seaborn
+unsloth
+trl
+accelerate
+peft
+bitsandbytes
+
+-e .

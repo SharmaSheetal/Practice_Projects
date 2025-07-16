@@ -197,4 +197,6 @@ artifacts/
 __pycache__
 .DS_Store
 
-Knowledge drift/
+
+results/
+Llama-2-7b-chat-finetune/

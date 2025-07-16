@@ -40,8 +40,8 @@ class ModelTrainer:
             model=model_pegasus,
             args=trainer_args,
             data_collator=seq2seq_data_collator,
-            train_dataset=dataset_samsum_pt["train"].select(range(30)),  # Limiting to 1000 samples for faster training
-            eval_dataset=dataset_samsum_pt["validation"].select(range(30))
+            train_dataset=dataset_samsum_pt["train"].select(range(10)),  # Limiting to 1000 samples for faster training
+            eval_dataset=dataset_samsum_pt["validation"].select(range(10))
                             )
         trainer.train()
 
