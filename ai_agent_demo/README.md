@@ -72,6 +72,31 @@ Rag systems are often used in distributed systems where data is spread across mu
 
 Results are saved to `result.json`.
 
+## Methods Comparison
+Fine-tuning Method:
+The fine-tuned model demonstrated superior performance with more accurate and to-the-point explanations. The responses were well-structured and directly addressed the queries with appropriate context and detail.
+Prompt Tuning Method:
+While prompt tuning offered faster implementation and required minimal computational resources, the quality of responses was noticeably lower. The explanations lacked depth and precision compared to the fine-tuned approach.
+
+
+## Final Conclusion and Recommendation
+The choice between these methods depends on your specific constraints and requirements:
+### Choose Prompt Tuning when:
+
+- You have limited data available
+- Quick deployment is prioritized
+- You want to reserve your data for testing rather than training
+- You need to avoid overfitting risks due to small dataset size
+
+### Choose Fine-tuning when:
+
+- You have access to substantial, high-quality datasets
+- Superior performance is the primary objective
+- You can invest in computational resources and training time
+
+### Project-Specific Recommendation:
+In this case, since we utilized a comprehensive open-source dataset with sufficient instruction examples, fine-tuning proved to be the optimal approach. The abundant training data allowed the model to learn effectively without overfitting concerns, resulting in significantly better performance that justifies the additional computational investment.
+
 ## License
 
 See [LICENSE](../LICENSE) for details.
