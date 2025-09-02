@@ -1,0 +1,23 @@
+<div class="sidebar" [class.collapsed]="isCollapsed">
+  <button class="toggle-btn" (click)="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul>
+    <li (click)="navigateTo('/landing-page')">
+      <span class="icon"><i class="fas fa-home"></i></span>
+      <a>Dashboard</a>
+    </li>
+    <li (click)="navigateTo('/flashcard')">
+      <span class="icon"><i class="fas fa-book-open"></i></span>
+      <a>Flashcards</a>
+    </li>
+    <li (click)="navigateTo('/quizzes')">
+      <span class="icon"><i class="fas fa-clipboard-list"></i></span>
+      <a>Quiz</a>
+    </li>
+    <li (click)="navigateTo('/results')">
+      <span class="icon"><i class="fas fa-chart-bar"></i></span>
+      <a>Results</a>
+    </li>
+  </ul>
+</div>

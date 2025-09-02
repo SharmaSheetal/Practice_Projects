@@ -1,0 +1,19 @@
+<div class="out">
+<div class="landing-container">
+  <div class="welcome-container">
+    <h1>Welcome to the Student Upload Portal</h1>
+    <p class="description">Study Assistant is a web application that helps students manage their study time and track
+      their progress.</p>
+    <p class="upload-message">Upload your study materials in PDF, DOCX, or TXT format.</p>
+  </div>
+
+  <div class="upload-box">
+    <div class="file-upload-zone">
+      <input type="file" id="fileUpload" (change)="onFileSelected($event)" multiple>
+    </div>
+
+    <button class="submit-btn" (click)="uploadFiles()" [disabled]="selectedFiles.length == 0">Upload Files</button>
+    <p class="upload-feedback">{{ uploadMessage }}</p>
+  </div>
+</div>
+</div>

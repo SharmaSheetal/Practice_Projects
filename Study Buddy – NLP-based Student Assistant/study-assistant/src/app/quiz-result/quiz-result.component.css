@@ -1,0 +1,128 @@
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading styles */
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #444;
+    margin-top: 20px;
+  }
+  
+  /* Card styles for each quiz attempt */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card body styling */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Styling for the score and toggle button section */
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5a63e3;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #5a63e3;
+  }
+  
+  /* Expanded details section */
+  .mt-3 {
+    margin-top: 20px;
+  }
+  
+  /* Answers section */
+  .card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    padding: 15px;
+  }
+  
+  .card-body p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .text-success {
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+    font-weight: bold;
+  }
+  
+  /* Total correct/incorrect answers summary */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-center p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #444;
+    margin: 10px 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+    }
+  
+    .card-body {
+      padding: 15px;
+    }
+  
+    .d-flex {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    button {
+      margin-top: 10px;
+      width: 100%;
+    }
+  
+    .card {
+      margin-bottom: 15px;
+    }
+  }
+  

@@ -1,0 +1,211 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Light pastel background */
+  }
+  
+  .flashcard-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+  }
+  
+  .quiz-list {
+    text-align: center;
+    padding: 20px;
+    color: #444444; /* Dark gray text */
+  }
+  
+  .quiz-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .quiz-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quiz-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .version {
+    font-size: 14px;
+    color: #acb5d1; /* Light grayish-blue text */
+    margin-top: 10px;
+  }
+  
+  .summary {
+    font-size: 16px;
+    color: #444444;
+    margin: 10px 0;
+  }
+  
+  .flashcard-section {
+    margin-top: 2rem;
+  }
+  
+  .navigation {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .back-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #6c72ff; /* Accent pastel indigo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: #5a60e0; /* Slightly darker on hover */
+  }
+  
+  .flashcard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .flashcard {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1; /* Makes the card square */
+    perspective: 1000px;
+    position: relative;
+  }
+  
+  .flashcard-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+  }
+  
+  .flashcard-front,
+  .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+  
+  .flashcard-front {
+    background: #ffffff; /* White for the front */
+    color: #444444;
+  }
+  
+  .flashcard-back {
+    background: linear-gradient(145deg, #6c72ff, #acb5d1); /* Soft indigo gradient */
+    color: #fff;
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard-inner.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  button.nav-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #6c72ff; /* Accent pastel indigo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.nav-btn:hover {
+    background-color: #5a60e0; /* Slightly darker on hover */
+  }
+  
+  button.nav-btn:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .flashcard-app {
+      padding: 15px;
+    }
+  
+    .quiz-cards-container {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  
+    .flashcard {
+      max-width: 250px;
+    }
+  }
+  
+  .start-btn {
+    background: #6c72ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .start-btn:hover {
+    background: #5a60e0;
+    transform: scale(1.05);
+  }
+  
+  /* Style for icons in buttons */
+  button i {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+  
+  /* Specific button styling */
+  .start-btn i, .back-btn i, .nav-btn i {
+    font-size: 20px;
+    color: #fff;
+  }
+  

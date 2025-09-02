@@ -1,0 +1,16 @@
+<div class="quiz-list">
+  <h2>Available Quizzes</h2>
+  <hr>
+  <div class="quiz-container">
+    <div class="quiz-card" *ngFor="let quiz of quizzes">
+      <div class="quiz-header">
+        <h3>{{ quiz.name }}</h3>
+        <p class="version">Version: {{ quiz.version || 'Latest' }}</p>
+      </div>
+      <p class="summary">{{ quiz.summary }}</p>
+      <button class="start-btn" (click)="startQuiz(quiz._id)">
+        <i class="bi bi-play-circle"></i> Start Quiz
+      </button>
+    </div>
+  </div>
+</div>

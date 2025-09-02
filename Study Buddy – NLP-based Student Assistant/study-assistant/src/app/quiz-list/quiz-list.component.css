@@ -1,0 +1,119 @@
+/* General Styles for Quiz List */
+.quiz-list {
+  text-align: center;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff; /* Same background color as the flashcards */
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2c3e50; /* Darker text for contrast */
+}
+
+hr {
+  border: 1px solid #ddd;
+  width: 60%;
+  margin: 10px auto 30px;
+}
+
+.quiz-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.quiz-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.quiz-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.version {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.summary {
+  font-size: 16px;
+  color: #555;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.start-btn {
+  background-color: #6c72ff; /* Same color as flashcards */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.start-btn i {
+  font-size: 18px;
+}
+
+.start-btn:hover {
+  background-color: #5a60e0; /* Slightly brighter hover color */
+  transform: scale(1.05);
+}
+
+.start-btn:active {
+  transform: scale(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .quiz-container {
+    gap: 20px;
+  }
+
+  .quiz-card {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container {
+    gap: 15px;
+  }
+
+  .quiz-card {
+    width: 200px;
+  }
+
+  .start-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

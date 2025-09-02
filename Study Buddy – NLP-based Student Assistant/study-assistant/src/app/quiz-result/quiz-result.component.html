@@ -1,0 +1,60 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Quiz Results</h2>
+  
+    <!-- Display grouped quiz attempts -->
+    <div *ngFor="let quizName of quizNames">
+      <h3>{{ quizName }}</h3>
+      <div *ngFor="let attempt of groupedAttempts[quizName]; let i = index">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <div>
+                <strong>Score:</strong> {{ attempt.score }} / {{ attempt.totalQuestions }}
+              </div>
+              <div>
+                <button (click)="toggleDetails(quizName, i)" class="btn btn-info">
+                  {{ expandedRowIndex[quizName] === i ? 'Hide Details' : 'Show Details' }}
+                </button>
+              </div>
+            </div>
+  
+            <!-- Expanded details section -->
+            <div *ngIf="expandedRowIndex[quizName] === i">
+              <div class="mt-3">
+                <p><strong>Quiz Description:</strong> {{ attempt.quizDescription }}</p>
+                <p><strong>Attempted At:</strong> {{ attempt.attemptedAt | date: 'medium' }}</p>
+  
+                <!-- List of answers with correct/incorrect indicators -->
+                <div *ngFor="let answer of attempt.answers; let j = index" class="mb-2">
+                  <div class="card mb-2">
+                    <div class="card-header">
+                      <strong>Question {{ j + 1 }}:</strong> {{ answer.question.question }}
+                    </div>
+                    <div class="card-body">
+                      <p><strong>Your Answer: </strong>{{ answer.studentAnswer }}</p>
+                      <p *ngIf="answer.isCorrect" class="text-success"><strong>Correct Answer!</strong></p>
+                      <p *ngIf="!answer.isCorrect" class="text-danger">
+                        <strong>Incorrect!</strong> The correct answer is: {{ answer.question.answers }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Correct and Incorrect Answers Summary -->
+                <div class="text-center">
+                  <p><strong>Total Correct Answers: </strong>{{ getCorrectAnswers(attempt) }} / {{ attempt.totalQuestions }}</p>
+                  <p><strong>Total Incorrect Answers: </strong>{{ getIncorrectAnswers(attempt) }} / {{ attempt.totalQuestions }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Message when no quiz attempts are found -->
+    <div *ngIf="quizAttempts.length === 0">
+      <p>No quiz attempts found for this student.</p>
+    </div>
+  </div>
+  
